@@ -9,15 +9,11 @@ const HalamanMaps = ({navigation}) => {
   return (
     <View style={{flex:1, backgroundColor:'white'}}>
 <ScrollView>
-       <View st6yle={{}}>
- 
+       <View style={{alignItems:'center'}}>
         <Image style={{width:360, height:522}} source={MyMaps}  />
-              <View style={{flexDirection:'row'}}>
-<TouchableOpacity onPress={BackPage}  style={{padding:10, backgroundColor:'white', borderRadius:20, bottom:479, left:30, borderWidth:1}}>
- <Image style={{width:10, height:10}} source={Back} />
-</TouchableOpacity>
        </View>
-       </View>
+
+<View style={{aligntems:'center'}}>
 
        <View style={{padding:10, flexDirection:'row'}}>
 <Image style={{width:225, height:35}} source={LaundriSukaburis} />
@@ -29,6 +25,8 @@ const HalamanMaps = ({navigation}) => {
        <View style={{padding:10}}>
 <Image  style={{width:271, height:382}}  source={RateMapsLaundriSukaburi} />
        </View>
+</View>
+
 </ScrollView>
 
 

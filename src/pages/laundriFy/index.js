@@ -64,14 +64,20 @@ const HalamanLaundriFy = ({navigation}) => {
     <Text style={{fontFamily:'Poppins-SemiBold', fontSize:12}}>Their Review</Text>
       <Text style={{fontFamily:'Poppins-Regular', fontSize:12}}>See more</Text>
 </View>
-<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+<ScrollView style={{padding:0}} horizontal showsHorizontalScrollIndicator={false}>
+<View style={{padding:10}}>
 <Image style={{width:256, height:106}} source={Riviewchat_1} />
-<Image style={{width:256, height:106, left:10}} source={Riviewchat_2} />
-<Image style={{width:256, height:106, left:10}} source={RiviewChat_3} />
+</View>
+<View style={{padding:10}}>
+<Image style={{width:256, height:106}} source={Riviewchat_2} />
+</View>
+<View style={{padding:10}}>
+<Image style={{width:256, height:106,}} source={RiviewChat_3} />
+</View>
 </ScrollView>
 </View>
 
-<View style={{marginTop:'50%'}}>
+<View style={{marginTop:'45%'}}>
 <TouchableOpacity onPress={() => navigation.navigate('HalamanWash')} style={{padding:10, backgroundColor:colors.primary, borderRadius:20,}}>
 <Text style={{color:'white', fontFamily:'Poppins-SemiBold', textAlign:'center'}}>Wash Now</Text>
 </TouchableOpacity>

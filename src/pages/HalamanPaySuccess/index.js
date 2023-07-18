@@ -22,7 +22,7 @@ const HalamanPaySuccess = ({navigation}) => {
 <View style={{padding:10}}>
 
 <View style={{alignItems:'center', marginTop:20}}>
-<Image style={{width:359, height:498}} source={Payment}/>
+<Image style={{width:359, height:500}} source={Payment}/>
 </View>
 
 <TouchableOpacity onPress={() => navigation.navigate('HalamanReview')} style={{padding:10, backgroundColor:'white', marginTop:'25%',  borderRadius:20, borderWidth:1, borderColor:colors.primary}}>
