@@ -1,9 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { Back, BottomArrow, Hide } from '../../assets'
+import { Back, BottomArrow, Hide, ShowPassword } from '../../assets'
 import colors from '../../utils/colors/colors'
 
 const HalamanRegister = ({navigation}) => {
+
+const [passwordVisible, setPasswordVisible] = useState(false);
+
+const [passwordVisible2, setPasswordVisible2] = useState(false);
+
+
+const [form, setForm] = useState({
+  phone: '',
+  name: '',
+  password: '',
+});
+
+const Show = () => {
+<Image source={ShowPassword} style={{height:20, width:20}}/>
+}
+
+
+const handleRegister = () => {
+if ((form.phone.length == 0 ) || (form.name.length == 0) || (form.password.length == 0)) {
+alert('Semua feild harus di isi!');
+} else if (form.phone.length <12) {
+  alert('NO Hp tidak boleh kurang dari 12 nomor!');
+} else if (form.phone.length >12) {
+  alert('NO Hp tidak boleh lenih dari 12 nomor!')
+} else {
+console.log(form);
+alert('Selamat Datang!');
+navigation.replace('HalamanMainPage');
+}
+
+}
+
   return (
     <View style={{flex:1, backgroundColor:'white', }}>
     <ScrollView>
@@ -36,7 +68,7 @@ borderColor:'#C7C9CA',
       color: 'black',
       fontFamily: 'Poppins-Regular',
       fontSize: 12, paddingRight:20, paddingLeft:20}} placeholder='Mobile Number' placeholderTextColor='gray' 
-      />
+       value={form.phone} onChangeText={value => setForm({...form, phone: value})} />
       
 </View>
 
@@ -62,7 +94,7 @@ borderColor:'#C7C9CA',
       color: 'black',
       fontFamily: 'Poppins-Regular',
       fontSize: 12, paddingRight:10, paddingLeft:10}} placeholder='Enter Name' placeholderTextColor='gray' 
-      />
+        value={form.name} onChangeText={value => setForm({...form, name: value})} />
       
 </View>
 
@@ -88,8 +120,12 @@ borderColor:'#C7C9CA',
       color: 'black',
       fontFamily: 'Poppins-Regular',
       fontSize: 12, paddingRight:10, paddingLeft:10}} placeholder='Enter Password' placeholderTextColor='gray' 
-     secureTextEntry={true}  />
-      <Image style={{width:21, height:21}} source={Hide} />
+      value={form.password} onChangeText={value => setForm({...form, password: value})}
+     secureTextEntry={!passwordVisible}  />
+     <TouchableOpacity onPress={() => setPasswordVisible((prev => !prev))}>
+<Image style={{width:21, height:21, }} source={passwordVisible ? ShowPassword : Hide} />
+     </TouchableOpacity>
+      
 </View>
 
 
@@ -114,11 +150,15 @@ borderColor:'#C7C9CA',
       color: 'black',
       fontFamily: 'Poppins-Regular',
       fontSize: 12, paddingRight:10, paddingLeft:10}} placeholder='Confirm Password' placeholderTextColor='gray' 
-     secureTextEntry={true}  />
-      <Image style={{width:21, height:21}} source={Hide} />
+       onChangeText={value => setForm({...form, password: value})}
+     secureTextEntry={!passwordVisible2}  />
+      <TouchableOpacity  onPress={() => setPasswordVisible2((prev => !prev))}>
+<Image style={{width:21, height:21}} source={passwordVisible2 ? ShowPassword : Hide} />
+     </TouchableOpacity>
+      
 </View>
 
-<TouchableOpacity onPress={()=> navigation.navigate('HalamanMainPage')} style={{padding:10, backgroundColor:colors.primary, borderRadius:20, marginTop:'45%'}}>
+<TouchableOpacity onPress={handleRegister} style={{padding:10, backgroundColor:colors.primary, borderRadius:20, marginTop:'45%'}}>
     <Text style={{fontFamily:'Poppins-SemiBold', color:'white', textAlign:'center'}}>Sign Up</Text>
 </TouchableOpacity>
 

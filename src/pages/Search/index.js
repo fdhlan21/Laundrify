@@ -37,10 +37,8 @@ const HalamanSearch = ({navigation}) => {
     <View style={{marginTop:10}}>
     <TouchableOpacity onPress={() => navigation.navigate('HalamanLaundriFy')}>
 <View style={{flexDirection:'row'}}>
-    <Image style={{height:87, width:87}} source={IconHomePertama} />
-    <Text style={{fontFamily:'Poppins-Regular',}}>Laundrify{'\n'}<Image style={{height:15, width:29}} source={Rate4_3} />{'\n'}
-    <Text style={{fontSize:10}}>Taken in 3 minutes  0.2 km</Text>{'\n'}
-     <Text style={{fontSize:10}}>Rp. 8000/Kg</Text></Text>
+    <Image style={{height:90, width:312}} source={IconHomePertama} />
+
     </View>
 </TouchableOpacity>
 </View>
@@ -48,10 +46,8 @@ const HalamanSearch = ({navigation}) => {
 
 <View style={{marginTop:10}}>
 <View style={{flexDirection:'row'}}>
-    <Image style={{height:87, width:87}} source={IconHomeKedua} />
-    <Text style={{fontFamily:'Poppins-Regular',}}>Expresss{'\n'}<Image style={{height:15, width:29}} source={Rate4_1} />{'\n'}
-    <Text style={{fontSize:10}}>Taken in 9 minutes 0.7 km</Text>{'\n'}
-     <Text style={{fontSize:10}}>Rp. 7000/Kg</Text></Text>
+    <Image style={{height:90, width:312}} source={IconHomeKedua} />
+
     </View>
 
 </View>
@@ -59,10 +55,8 @@ const HalamanSearch = ({navigation}) => {
 
 <View style={{marginTop:10}}>
 <View style={{flexDirection:'row'}}>
-    <Image style={{height:87, width:87}} source={IconHomeKetiga} />
-    <Text style={{fontFamily:'Poppins-Regular',}}>100 Clean{'\n'}<Image style={{height:15, width:29}} source={Rate4_2} />{'\n'}
-    <Text style={{fontSize:10}}>Taken in 8 minutes 0.6 km</Text>{'\n'}
-     <Text style={{fontSize:10}}>Rp. 6000/Kg</Text></Text>
+    <Image style={{height:90, width:312}} source={IconHomeKetiga} />
+
     </View>
 
 </View>
@@ -70,10 +64,8 @@ const HalamanSearch = ({navigation}) => {
 
 <View style={{marginTop:10}}>
 <View style={{flexDirection:'row'}}>
-    <Image style={{height:87, width:87}} source={IconHomeEmpat} />
-    <Text style={{fontFamily:'Poppins-Regular',}}>Blueclean{'\n'}<Image style={{height:15, width:29}} source={Rate4_5} />{'\n'}
-    <Text style={{fontSize:10}}>Taken in 4 minutes 0.3 km</Text>{'\n'}
-     <Text style={{fontSize:10}}>Rp. 9000/Kg</Text></Text>
+    <Image style={{height:90, width:312}} source={IconHomeEmpat} />
+
     </View>
 
 </View>
@@ -81,10 +73,8 @@ const HalamanSearch = ({navigation}) => {
 
 <View style={{marginTop:10}}>
 <View style={{flexDirection:'row'}}>
-    <Image style={{height:87, width:87}} source={IconHomeLima} />
-    <Text style={{fontFamily:'Poppins-Regular',}}>Laundry{'\n'}<Image style={{height:15, width:29}} source={Rate4_3} />{'\n'}
-    <Text style={{fontSize:10}}>Taken in 10 minutes 0.9 km</Text>{'\n'}
-     <Text style={{fontSize:10}}>Rp. 8000/Kg</Text></Text>
+    <Image style={{height:90, width:312}} source={IconHomeLima} />
+
     </View>
 
 </View>

@@ -10,14 +10,19 @@ const HalamanMessage = ({navigation}) => {
     <View style={{flex:1, backgroundColor:'white'}}>
     <ScrollView>
      <View style={{padding:10}}>
-<View style={{flexDirection:'row', padding:20, justifyContent:'space-between'}}>
+
+<View style={{padding:10,}}>
+
+<View style={{flexDirection:'row', justifyContent:'space-between'}}>
 <TouchableOpacity onPress={BackPage}>
  <Image style={{width:15, height:15}} source={Back} />
 </TouchableOpacity>
  
  <Text style={{fontFamily:'Poppins-SemiBold', fontSize:16, }}>Chat</Text>
 </View>
+</View>
 
+<View style={{alignItems:'center'}}>
 <TouchableOpacity onPress={() => navigation.navigate('HalamanChat')}>
 <View style={{padding:10,}}>
 <Image style={{width:312, height:42,}} source={LondyChat}/>
@@ -27,6 +32,9 @@ const HalamanMessage = ({navigation}) => {
 <View style={{padding:10, marginTop:10}}>
 <Image style={{width:307, height:186,}} source={ChatList}/>
 </View>
+
+</View>
+
 
      </View>
      </ScrollView>
